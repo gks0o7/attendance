@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="1.8in"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/blue"
+        app:strokeWidth="0dp"
+        tools:ignore="MissingClass">
+
+        <Button
+            android:id="@+id/t_appname"
+            android:layout_width="2.2in"
+            android:layout_height="0.5in"
+            android:text="Attendance Recording System"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rectangle_button_background"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="93dp"
+            android:letterSpacing="0.04"
+            android:text="Welcome, User"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/backB"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/class_manage_button"
+            android:layout_width="2.2in"
+            android:layout_height="0.5in"
+            android:text="Class management"
+            android:background="@drawable/rectangle_button_background"
+            android:layout_marginTop="400dp"
+            android:layout_centerHorizontal="true"
+            app:icon="@drawable/classmanage"
+            android:textColor="@color/white"
+            app:iconTint = "@color/white"
+            app:iconSize = "30dp"
+            app:backgroundTint = "@color/blue"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            />
+
+    <Button
+        android:id="@+id/manage_attendance_records"
+        android:layout_width="2.2in"
+        android:layout_height="0.5in"
+        android:text="Manage attendance records"
+        android:background="@drawable/rectangle_button_background"
+        android:layout_marginTop="500dp"
+        android:layout_centerHorizontal="true"
+        app:icon="@drawable/attend_icon"
+        android:textColor="@color/white"
+        app:iconTint = "@color/white"
+        app:backgroundTint = "@color/blue"
+        app:iconSize = "30dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        />
+
+
+
+</RelativeLayout>
