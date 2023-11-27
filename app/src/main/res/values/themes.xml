@@ -6,4 +6,18 @@
     </style>
 
     <style name="Theme.Attend" parent="Base.Theme.Attend" />
+
+
+    <style name="BaseTextStyle" parent="">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="OutlinedInputFieldBox6" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">6dp</item>
+        <item name="boxCornerRadiusBottomStart">6dp</item>
+        <item name="boxCornerRadiusTopEnd">6dp</item>
+        <item name="boxCornerRadiusTopStart">6dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="colorPrimary">@color/jet_black</item>
+    </style>
 </resources>

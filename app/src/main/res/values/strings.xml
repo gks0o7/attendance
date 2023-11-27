@@ -7,6 +7,9 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="lets_log_you_in">Let’s log you in.</string>
+    <string name="enter_username_pass">Enter your username and password to \nlog in</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
@@ -45,4 +48,9 @@
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username_literal">Username</string>
+    <string name="password_literal">Password</string>
+    <string name="login_literal">Login</string>
+    <string name="username_can_t_be_empty">Username number can’t be empty</string>
+    <string name="please_enter_password">Please enter password</string>
 </resources>
