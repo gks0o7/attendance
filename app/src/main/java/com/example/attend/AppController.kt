@@ -13,5 +13,10 @@ class AppController: Application() {
 
     override fun onCreate() {
         super.onCreate()
+        initDb()
+    }
+
+    private fun initDb() {
+        dbFactory.init()
     }
 }

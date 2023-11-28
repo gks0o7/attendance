@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import androidx.navigation.fragment.findNavController
+import com.example.attend.MainActivity
 import com.example.attend.R
 import com.example.attend.common.base.BaseFragment
 import com.example.attend.common.util.coroutine.focusAndPlaceCursorToEnd
@@ -76,13 +78,14 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
         viewModel.uiState.onEach {
             when (it) {
                 is LoginViewModel.LoginUiState.Error -> {
-
+                    showShortToast(requireContext(), it.message)
                 }
                 is LoginViewModel.LoginUiState.Loading -> {
 
                 }
                 is LoginViewModel.LoginUiState.LoginSuccessful -> {
-
+                    MainActivity.start(requireActivity())
+                    activity?.finish()
                 }
             }
         }.observeInLifecycle(viewLifecycleOwner)

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.example.attend.common.base.BaseActivity
 import com.example.attend.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -45,6 +46,17 @@ class MainActivity : BaseActivity<ActivityMainBinding, Nothing>() {
 
     override fun getViewBinding(): ActivityMainBinding {
         return ActivityMainBinding.inflate(layoutInflater)
+    }
+
+    override fun setUpViews() {
+        super.setUpViews()
+        init()
+    }
+
+    private fun init() {
+        navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_auth_fragment) as NavHostFragment
+        navController = navHostFragment.findNavController()
     }
 
 //    override fun onCreate(savedInstanceState: Bundle?) {

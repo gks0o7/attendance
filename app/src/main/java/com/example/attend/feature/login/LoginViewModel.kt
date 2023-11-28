@@ -1,6 +1,7 @@
 package com.example.attend.feature.login
 
 import com.example.attend.AppController
+import com.example.attend.common.Resource
 import com.example.attend.common.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
@@ -16,18 +17,19 @@ class LoginViewModel @Inject constructor(
     val uiState = uiStateEvent.receiveAsFlow()
 
     fun login(username: String, password: String) = launchIO {
-//        val loginResponse = authRepository.login(username, password)
-//        when (loginResponse) {
-//            is Resource.Error -> {
-//
-//            }
-//            is Resource.Loading -> {
-//
-//            }
-//            is Resource.Success -> {
-//
-//            }
-//        }
+//        uiStateEvent.send(LoginUiState.Loading)
+        val loginResponse = appController.dbFactory.userDao.login(username, password)
+        when (loginResponse) {
+            is Resource.Error -> {
+                uiStateEvent.send(LoginUiState.Error(loginResponse.errorMessage))
+            }
+            is Resource.Loading -> {
+
+            }
+            is Resource.Success -> {
+                uiStateEvent.send(LoginUiState.LoginSuccessful)
+            }
+        }
     }
 
     sealed class LoginUiState {
