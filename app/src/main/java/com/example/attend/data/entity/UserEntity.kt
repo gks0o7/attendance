@@ -1,4 +1,4 @@
-package com.example.attend.data.local.entity
+package com.example.attend.data.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
