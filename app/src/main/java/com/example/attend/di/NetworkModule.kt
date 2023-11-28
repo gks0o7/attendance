@@ -5,8 +5,13 @@ import com.example.attend.data.repository.AuthRepositoryImpl
 import com.example.attend.domain.repository.AuthRepository
 import com.example.attend.domain.repository.DataLocalSource
 import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+@Module
+@InstallIn(SingletonComponent::class)
 abstract class NetworkModule {
 
     @Binds
