@@ -11,7 +11,9 @@ plugins {
 android {
     namespace 'com.example.attend'
     compileSdk 34
-
+    viewBinding{
+        enabled = true
+    }
     defaultConfig {
         applicationId "com.example.attend"
         minSdk 24

@@ -6,39 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/admin_header"
         android:layout_width="match_parent"
-        android:layout_height="1.8in"
-        android:layout_centerHorizontal="true"
+        android:layout_height="145dp"
+        app:cardBackgroundColor="@color/blue"
         app:cardCornerRadius="0dp"
         app:cardElevation="8dp"
-        app:cardBackgroundColor="@color/blue"
         app:strokeWidth="0dp"
         tools:ignore="MissingClass">
 
-        <Button
-            android:id="@+id/t_appname"
-            android:layout_width="2.2in"
-            android:layout_height="0.5in"
-            android:text="Attendance Recording System"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/rectangle_button_background"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            />
-
+<!--        <Button-->
+<!--            android:id="@+id/t_appname"-->
+<!--            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"-->
+<!--            android:layout_width="2.2in"-->
+<!--            android:layout_height="0.5in"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:background="@drawable/rectangle_button_background"-->
+<!--            android:text=""-->
+<!--            android:textColor="@color/white" />-->
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:layout_marginTop="80dp"
             android:layout_marginLeft="93dp"
+            android:layout_marginTop="80dp"
             android:letterSpacing="0.04"
-            android:text="Welcome, User"
+            android:text="Welcome, Admin"
             android:textColor="@color/white"
             android:textSize="28sp"
             android:textStyle="bold"
@@ -47,38 +43,28 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-        <Button
-            android:id="@+id/class_manage_button"
-            android:layout_width="2.2in"
-            android:layout_height="0.5in"
-            android:text="Class management"
-            android:background="@drawable/rectangle_button_background"
-            android:layout_marginTop="400dp"
-            android:layout_centerHorizontal="true"
-            app:icon="@drawable/classmanage"
-            android:textColor="@color/white"
-            app:iconTint = "@color/white"
-            app:iconSize = "30dp"
-            app:backgroundTint = "@color/blue"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            />
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/admin_header"
+        android:layout_above="@+id/manage_attendance_records" />
 
     <Button
         android:id="@+id/manage_attendance_records"
-        android:layout_width="2.2in"
-        android:layout_height="0.5in"
-        android:text="Manage attendance records"
-        android:background="@drawable/rectangle_button_background"
-        android:layout_marginTop="500dp"
-        android:layout_centerHorizontal="true"
-        app:icon="@drawable/attend_icon"
-        android:textColor="@color/white"
-        app:iconTint = "@color/white"
-        app:backgroundTint = "@color/blue"
-        app:iconSize = "30dp"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-        />
-
-
+        android:layout_width="154dp"
+        android:layout_height="62dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle_button_background"
+        android:text="button"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/blue"
+        app:icon="@drawable/attend_icon"
+        app:iconSize="30dp"
+        app:iconTint="@color/white" />
 
 </RelativeLayout>
