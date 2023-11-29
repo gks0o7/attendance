@@ -1,0 +1,67 @@
+
+Table: admin
++------------------+--------------+------+-----+---------+----------------+
+| Field            | Type         | Null | Key | Default | Extra          |
++------------------+--------------+------+-----+---------+----------------+
+| admin_id         | INT          | NO   | PRI | NULL    | Auto-increment |
+| username         | VARCHAR(50)  | NO   | UNI | NULL    |                |
+| password         | VARCHAR(255) | NO   |     | NULL    |                |
+| email            | VARCHAR(100) | NO   | UNI | NULL    |                |
+| created_at       | TIMESTAMP    | NO   |     | CURRENT_TIMESTAMP |    |
++------------------+--------------+------+-----+---------+----------------+
+
+Table: teacher
++------------------+--------------+------+-----+---------+----------------+
+| Field            | Type         | Null | Key | Default | Extra          |
++------------------+--------------+------+-----+---------+----------------+
+| teacher_id       | INT          | NO   | PRI | NULL    | Auto-increment |
+| admin_id         | INT          | NO   | MUL | NULL    |                |
+| username         | VARCHAR(50)  | NO   | UNI | NULL    |                |
+| password         | VARCHAR(255) | NO   |     | NULL    |                |
+| email            | VARCHAR(100) | NO   | UNI | NULL    |                |
+| created_at       | TIMESTAMP    | NO   |     | CURRENT_TIMESTAMP |    |
++------------------+--------------+------+-----+---------+----------------+
+
+
+
+Table: student
++------------------+--------------+------+-----+---------+----------------+
+| Field            | Type         | Null | Key | Default | Extra          |
++------------------+--------------+------+-----+---------+----------------+
+| student_id       | INT          | NO   | PRI | NULL    | Auto-increment |
+| teacher_id       | INT          | NO   | MUL | NULL    |                |
+| username         | VARCHAR(50)  | NO   | UNI | NULL    |                |
+| password         | VARCHAR(255) | NO   |     | NULL    |                |
+| email            | VARCHAR(100) | NO   | UNI | NULL    |                |
+| created_at       | TIMESTAMP    | NO   |     | CURRENT_TIMESTAMP |    |
++------------------+--------------+------+-----+---------+----------------+
+
+
+
+
+Table: class
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| class_id     | INT          | NO   | PRI | NULL    | Auto-increment |
+| teacher_id   | INT          | NO   | MUL | NULL    |                |
+| class_name   | VARCHAR(100) | NO   |     | NULL    |                |
+| description  | TEXT         | YES  |     | NULL    |                |
+| created_at   | TIMESTAMP    | NO   |     | CURRENT_TIMESTAMP |    |
++--------------+--------------+------+-----+---------+----------------+
+
+
+
+Table: Attendance
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| recordId    | INT          | NO   | PRI | NULL    | Auto-increment |
+| classId     | INT          | NO   | MUL | NULL    |                |
+| studentId   | INT          | NO   | MUL | NULL    |                |
+| date        | DATE         | NO   |     | NULL    |                |
+| dayOfWeek   | VARCHAR(10)  | NO   |     | NULL    |                |
+| startTime   | TIME         | NO   |     | NULL    |                |
+| endTime     | TIME         | NO   |     | NULL    |                |
+| status      | ENUM('Present', 'Absent', 'Tardy') | NO | NULL |        |
++-------------+--------------+------+-----+---------+----------------+

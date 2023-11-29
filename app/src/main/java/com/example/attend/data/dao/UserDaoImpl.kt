@@ -9,7 +9,8 @@ import java.sql.PreparedStatement
 import java.sql.ResultSet
 import kotlin.coroutines.CoroutineContext
 
-class UserDaoImpl(
+class
+UserDaoImpl(
     private val db: DbModule
 ) : UserDao {
 
