@@ -20,13 +20,13 @@ class LoginViewModel @Inject constructor(
         val loginResponse = authRepository.login(username, password)
         when (loginResponse) {
             is Resource.Error -> {
-
+                uiStateEvent.send(LoginUiState.Error(loginResponse.errorMessage))
             }
             is Resource.Loading -> {
 
             }
             is Resource.Success -> {
-
+                uiStateEvent.send(LoginUiState.LoginSuccessful)
             }
         }
     }

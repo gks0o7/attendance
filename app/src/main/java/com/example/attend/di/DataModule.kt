@@ -26,7 +26,6 @@ class DataModule {
     @Singleton
     fun provideAttendanceDB(@ApplicationContext context: Context) =
         Room.databaseBuilder(context, AttendanceDB::class.java, "attendance.db")
-//            .fallbackToDestructiveMigration() // TODO don't do this in prod
-//            .createFromAsset("database/snooky.db")
+            .createFromAsset("database/attend.db")
             .build()
 }
