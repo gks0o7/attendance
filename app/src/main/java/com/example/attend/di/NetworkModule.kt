@@ -1,7 +1,9 @@
 package com.example.attend.di
 
 import com.example.attend.data.local.DataLocalSourceImpl
+import com.example.attend.data.repository.AdminRepositoryImpl
 import com.example.attend.data.repository.AuthRepositoryImpl
+import com.example.attend.domain.repository.AdminRepository
 import com.example.attend.domain.repository.AuthRepository
 import com.example.attend.domain.repository.DataLocalSource
 import dagger.Binds
@@ -17,6 +19,10 @@ abstract class NetworkModule {
     @Binds
     @Singleton
     abstract fun provideAuthRepository(authRepository: AuthRepositoryImpl): AuthRepository
+
+    @Binds
+    @Singleton
+    abstract fun provideAdminRepository(adminRepository: AdminRepositoryImpl): AdminRepository
 
     @Binds
     @Singleton

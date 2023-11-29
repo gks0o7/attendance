@@ -53,4 +53,17 @@
     <string name="login_literal">Login</string>
     <string name="username_can_t_be_empty">Username number can’t be empty</string>
     <string name="please_enter_password">Please enter password</string>
+    <string name="teachers_literal">Teachers\n</string>
+    <string name="attendance_recording_system">Attendance Recording System</string>
+    <string name="welcome_admin">Welcome, User</string>
+    <string name="manage_teachers">Manage teachers</string>
+    <string name="manage_students">Manage students</string>
+    <string name="add_teacher">Add teacher</string>
+    <string name="add_literal">Add</string>
+    <string name="name_literal">Name</string>
+    <string name="teacher_added">Teacher added successfully</string>
+    <string name="teacher_updated">Teacher updated successfully</string>
+    <string name="password_legth_short">Password must be 6 digit strong</string>
+    <string name="name_required">Name is required, Please enter name</string>
+    <string name="password_required">Password is required</string>
 </resources>

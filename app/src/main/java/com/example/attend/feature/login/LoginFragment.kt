@@ -9,9 +9,9 @@ import android.view.inputmethod.EditorInfo
 import com.example.attend.MainActivity
 import com.example.attend.R
 import com.example.attend.common.base.BaseFragment
-import com.example.attend.common.util.coroutine.focusAndPlaceCursorToEnd
 import com.example.attend.common.util.coroutine.observeInLifecycle
-import com.example.attend.common.util.coroutine.showShortToast
+import com.example.attend.common.util.view.focusAndPlaceCursorToEnd
+import com.example.attend.common.util.view.showShortToast
 import com.example.attend.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.onEach

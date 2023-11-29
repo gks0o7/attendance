@@ -5,10 +5,7 @@ import com.example.attend.data.local.request.AddTeacherRequest
 import com.example.attend.domain.model.User
 import kotlinx.coroutines.flow.Flow
 
-interface DataLocalSource {
-
-    suspend fun loginUser(username: String, password: String): Resource<User>
-
+interface AdminRepository {
     suspend fun getTeachers(): Flow<List<User>>
 
     suspend fun getStudents(): Flow<List<User>>
